@@ -1,0 +1,265 @@
+body {
+  margin-top: 20px;
+  background: #eee;
+}
+
+.profile-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-header .profile-header-cover {
+  background-image: url(https://media.gettyimages.com/videos/abstract-simple-and-beautiful-green-background-soft-blurred-motion-video-id1284794402?s=640x640);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.profile-header .profile-header-cover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.profile-header .profile-header-content {
+  color: #fff;
+  padding: 25px;
+}
+
+.profile-header-img {
+  float: left;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  margin: 0 0 -20px;
+  padding: 3px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.profile-header-img img {
+  max-width: 100%;
+}
+
+.profile-header-info h4 {
+  font-weight: 500;
+  color: #fff;
+}
+
+.profile-header-img + .profile-header-info {
+  margin-left: 140px;
+}
+
+.profile-header .profile-header-content,
+.profile-header .profile-header-tab {
+  position: relative;
+}
+
+.profile-header .profile-header-tab {
+  background: black;
+  list-style-type: none;
+  margin: -10px 0 0;
+  padding: 0 0 0 140px;
+  white-space: nowrap;
+  border-radius: 0;
+}
+
+.profile-header .profile-header-tab > li {
+  display: inline-block;
+  margin: 0;
+}
+
+.profile-header .profile-header-tab > li > a {
+  display: block;
+  color: #929ba1;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+}
+
+.profile-header .profile-header-tab > li.active > a,
+.profile-header .profile-header-tab > li > a.active {
+  color: #ffde00;
+}
+
+.profile-content {
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.profile-content:after,
+.profile-content:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-content .tab-content,
+.profile-content .tab-pane {
+  background: 0 0;
+}
+
+.profile-left {
+  width: 200px;
+  float: left;
+}
+
+.profile-right {
+  margin-left: 240px;
+  padding-right: 20px;
+}
+
+.profile-image {
+  height: 175px;
+  line-height: 175px;
+  text-align: center;
+  font-size: 72px;
+  margin-bottom: 10px;
+  border: 2px solid #e2e7eb;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.profile-image img {
+  display: block;
+  max-width: 100%;
+}
+
+.profile-highlight {
+  padding: 12px 15px;
+  background: #fefde1;
+  border-radius: 4px;
+}
+
+.profile-highlight h4 {
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.buttonDisabled {
+  background-color: grey;
+}
+
+.box {
+  position: relative;
+  background: black;
+  border: 0.25rem solid black;
+  height: 11rem;
+  width: 11rem;
+  outline: 0;
+  overflow: hidden;
+}
+
+.box::before {
+  content: url(../img/logo.png);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  height: 200%;
+  left: -50%;
+  width: 200%;
+  background: black;
+  border-radius: 80px;
+  animation: spin 5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100%) rotate(50deg);
+  }
+}
+
+.swal2-icon.swal2-error {
+  border-color: #f27474 !important;
+}
+
+.loader img {
+  height: 120px;
+  width: 120px;
+  animation: spinlogo 2s linear infinite;
+}
+@keyframes spinloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinlogo {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.p-progress-spinner-circle {
+  stroke: #ffde00 !important;
+}
+
+.button-live {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 20px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+}
+
+.button-live {
+  animation: glowing 1300ms infinite;
+}
+
+
